@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
-import {View, Text,Image, TextInput, Button} from 'react-native'
-import {DrawerActions} from 'react-navigation'
+import {View, Text,Image, StyleSheet} from 'react-native'
 export default class TelaInicial extends Component{
     constructor(props){
       super(props)
@@ -10,8 +9,8 @@ export default class TelaInicial extends Component{
      
     }
     static navigationOptions = ({navigation})=> ({
-      drawerLabel: "Inicial",
-      drawerIcon: ({tintColor,focused})=>{
+      tabBarLabel: "Inicial",
+      tabBarIcon: ({tintColor,focused})=>{
         if(focused){
         return (
            <Image source={require('../assets/images/home_on.png')} style={{width: 20, height:20}}/>
@@ -27,10 +26,17 @@ export default class TelaInicial extends Component{
   
     render(){
       return(
-        <View>
+        <View style={styles.container}>
           <Text>Tela inicial</Text>
-          <Button title="Abrir DrawerNavigator" onPress={()=>this.props.navigation.dispatch(DrawerActions.openDrawer())} />
         </View>
       )
     }
   }
+const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 20,
+  }
+})
