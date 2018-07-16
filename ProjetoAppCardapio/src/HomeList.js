@@ -1,7 +1,14 @@
 import React, {Component} from 'react'
-import {View, Image, StyleSheet} from 'react-native'
+import {View, Image, FlatList, StyleSheet} from 'react-native'
 
 export default class HomeList extends Component{
+    constructor(props){
+        super(props)
+        this.state = {
+
+        }
+    }
+
     static navigationOptions = {
         title:'Restaurante XYZ',
         tabBarLabel:'Inicio',
@@ -22,7 +29,10 @@ export default class HomeList extends Component{
     render(){
         return (
             <View>
-                
+              <FlatList 
+                data={{}}
+                renderItem={{}}
+              />  
             </View>
         )
     }
