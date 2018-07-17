@@ -5,10 +5,8 @@ import HomeList from './HomeList'
 import HomeProducts from './HomeProducts'
 
 const Navegador = createStackNavigator({
-    HomeList:{screen:HomeList/*, navigationOptions:{ tabBarLabel: 'Inicio'}*/},
+    HomeList:{screen:HomeList, navigationOptions:{ tabBarLabel: 'Inicio'}},
     HomeProducts:{screen:HomeProducts}
-}, {
-   // initialRouteName : 'HomeList'
 })
 
 export default Navegador
